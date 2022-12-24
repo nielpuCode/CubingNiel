@@ -78,7 +78,7 @@ body{
 
 
 .container2{
-    /* border: 5px solid greenyellow; */
+    border: 5px solid greenyellow;
     background-image: url("src-pic/backgroundpage3.png");
     background-size: cover;
     background-position: center center;
@@ -89,7 +89,7 @@ body{
 
 .thecontent2{
     /* border: 2px solid red; */
-    width: 100%;
+    width: 90%;
     margin: 200px auto;
 }
 
