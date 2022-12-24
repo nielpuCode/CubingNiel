@@ -1,0 +1,266 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Rubik', sans-serif;
+    color: white;
+    cursor: default;
+}
+
+body{
+    background-color: rgb(0, 152, 255);
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    margin: 30px 50px;
+    margin-bottom: 0;
+    line-height: 80px;
+    border-radius: 50px;
+}
+
+.navbar h1{
+    margin: 0 40px;
+}
+
+.navbar ul li{
+    display: inline-block;
+    margin: 0 40px;
+    position: relative;
+}
+
+.navbar ul li a{
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navbar ul li::after{
+    content: '';
+    position: absolute;
+    height: 5px;
+    width: 0;
+    top: 55px;
+    left: 0;
+    background-color: orange;
+    transition: 0.5s;
+}
+
+.navbar ul li:hover::after{
+    width: 100%;
+}
+
+.check{
+    display: none;
+}
+.hamburger{
+    display: none;
+    font-size: 35px;
+}
+
+.container1{
+    /* border: 1px solid red; */
+    background-image: url("src-pic/backgroundpage1.png");
+    background-size: cover;
+    background-position: center center;
+    height: 100vh;
+    width:-webkit-fill-available;
+    display: grid;
+    place-items: center;
+}
+
+.container1 h1{
+    margin: 0 20px;
+    -webkit-text-stroke: 0.05px black;
+    margin-top: -150px;
+    text-align: center;
+    font-size: clamp(1em, 2.5em, 3.5em);
+}
+
+
+.container2{
+    /* border: 5px solid greenyellow; */
+    background-image: url("src-pic/backgroundpage3.png");
+    background-size: cover;
+    background-position: center center;
+    min-height: 100vh;
+    width:-webkit-fill-available;
+    display: grid;
+}
+
+.thecontent2{
+    /* border: 2px solid red; */
+    width: 100%;
+    margin: 200px auto;
+}
+
+.title-container2{
+    text-align: center;
+    margin: auto;
+    margin-bottom: 50px;
+    font-size: clamp(0.5em, 2.5em, 4em);
+}
+
+.stepcontent{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 70%;
+    height: fit-content;
+    margin: 0 auto;
+}
+
+.stepbox{
+    /* border: 2px solid red; */
+    text-align: center;
+    margin: 0 20px;
+    display: grid;
+    place-items: center;
+}
+
+.number1, .number2, .number3{
+    background: orange;
+    border-radius: 100%;
+    width: 200px;
+    height: 200px;
+    display: grid;
+    place-items: center;
+}
+
+.number1 h1, .number2 h1, .number3 h1{
+    font-size: clamp(1em, 4em, 5em);
+    color: white;
+    -webkit-text-stroke: 0.5px orange;
+}
+
+.container3{
+    background-image: url("src-pic/backgroundpage2.png");
+    background-size: cover;
+    background-position: center center;
+    width:-webkit-fill-available;
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+}
+
+.quotescontent{
+    display: flex;
+    margin: 200px auto;
+    flex-wrap: wrap;
+    height: fit-content;
+    justify-content: center;
+}
+
+.quotesbox{
+    border: 2px solid white;
+    border-radius: 25px;
+    width: -webkit-fill-available;
+    max-width: 400px; 
+    max-height: 550px;
+    margin: 10px 10px;
+    background-color: rgb(0, 152, 255);
+    box-shadow: 5px 5px 20px black;
+}
+
+.quotesbox img{
+    border-radius: 25px 25px 0 0;
+    width: 100%;
+}
+
+.author{
+    font-size: 0.5em;
+    padding: 5px;
+}
+
+.infobox{
+    padding: 10px;
+    font-size: 1rem;
+}
+
+footer{
+    background-color: rgb(5, 105, 172);
+    width: 100%;
+}
+
+.box1{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    line-height: 80px;
+}
+
+.box1 p{
+    margin: 0 50px;
+}
+
+
+@media (max-width: 1070px){
+    .navbar{
+        margin: 30px 30px;
+    }
+
+    .navbar h1{
+        margin: 0 30px;
+    }
+
+    .navbar ul li{
+        margin: 0 30px;
+    }
+}
+
+@media (max-width: 920px){
+    .navbar{
+        margin: 30px 20px;
+    }
+
+    .navbar h1{
+        margin: 0 10px;
+    }
+
+    .navbar ul{
+        position: fixed;
+        top: -100%;
+        left: 0;
+        width: 100%;
+        background-color: rgb(0, 152, 255);
+        box-shadow: 5px 5px 10px black, -5px -5px 10px black;
+        border-radius: 25px;
+        transition: 0.5s;
+    }
+
+    .navbar ul li{
+        display: block;
+        width: fit-content;
+        margin: 0 auto;
+    }
+    .navbar ul li::after{
+        background-color: rgb(189, 124, 3);
+    }
+
+    .hamburger{
+        display: block;
+    }
+
+    #check:checked ~ ul{
+        top: 100px;
+    }
+}
+
+@media (max-width: 1070px){
+    .stepbox{
+        margin: 10px auto;
+    }
+}
+
+@media (max-width: 500px){
+    .container1 h1{
+        color:rgb(221, 220, 220);
+        -webkit-text-stroke: 0.5px black;
+    }
+}
+
+@media (max-width: 851px){
+    .quotesbox{
+        max-width: 600px;
+        max-height: fit-content;
+    }
+}
