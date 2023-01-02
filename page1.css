@@ -78,7 +78,7 @@ body{
 
 
 .container2{
-    border: 5px solid greenyellow;
+    /* border: 5px solid greenyellow; */
     background-image: url("src-pic/backgroundpage3.png");
     background-size: cover;
     background-position: center center;
